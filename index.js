@@ -8,10 +8,18 @@ const PhoneNumberUtils = {
     const _phoneNumber = phoneNumber.toString();
     const nonASCIIPhone = _phoneNumber.replace(/[^\x00-\x7F]/g, '');
 
-    const invalidCharset = /([±!@#$%^&*()_§-=`~,./<>?[{}:\;|])/g;
-    const normalizePhoneNumber = nonASCIIPhone.replace(invalidCharset, '');
+    const validTokens = ['0','1','2','3','4','5','6','7','8','9','+'];
+    let cleanNumber = '';
 
-    return normalizePhoneNumber;
+    const phoneArr = nonASCIIPhone.split('');
+    console.log(phoneArr);
+    phoneArr.map(token => {
+      if (validTokens.indexOf(token) > -1) {
+        cleanNumber += token;
+      }
+    });
+
+    return cleanNumber;
   },
 
   /*
@@ -25,10 +33,12 @@ const PhoneNumberUtils = {
      if (_phoneNumber.length <= 0) throw new Error('phoneNumber must have a length > 0');
 
      let numberWithPrefix = phoneNumber;
-     if (_phoneNumber[0] == '0' && prefix) { // accept ints and strings
-       numberWithPrefix = `+31${phoneNumber.substring(3, _phoneNumber.length)}`;
+     if (_phoneNumber.substring(0,2) == '06' && prefix) { // accept ints and strings
+       numberWithPrefix = `+316${phoneNumber.substring(2, _phoneNumber.length)}`;
      } else if (_phoneNumber.substring(0, 4) == '+3106') { // only works with nl for now, need more declarative solution
        numberWithPrefix = `+316${phoneNumber.substring(4, _phoneNumber.length)}`;
+     } else if (_phoneNumber.substring(0,5) == '00316') { // only works with nl for now, need more declarative solution
+       numberWithPrefix = `+316${phoneNumber.substring(5, _phoneNumber.length)}`;
      }
 
      return numberWithPrefix;
