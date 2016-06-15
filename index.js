@@ -12,7 +12,6 @@ const PhoneNumberUtils = {
     let cleanNumber = '';
 
     const phoneArr = nonASCIIPhone.split('');
-    console.log(phoneArr);
     phoneArr.map(token => {
       if (validTokens.indexOf(token) > -1) {
         cleanNumber += token;
