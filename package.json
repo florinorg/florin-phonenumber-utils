@@ -1,6 +1,6 @@
 {
   "name": "@basdevries/florin-phonenumber-utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "phonenumber utils for florin back and frontend",
   "main": "index.js",
   "scripts": {
