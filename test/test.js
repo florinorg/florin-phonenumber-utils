@@ -1,5 +1,8 @@
 const assert = require('chai').assert;
-import { addPrefixToNumber, normalizePhoneNumber } from '../source/index.js';
+const utils = require('../index.js');
+
+const addPrefixToNumber = utils.addPrefixToNumber;
+const normalizePhoneNumber = utils.normalizePhoneNumber;
 
 describe('PhoneNumberUtils', function() {
   describe('normalizePhoneNumber', function() {

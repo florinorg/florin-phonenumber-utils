@@ -4,8 +4,8 @@
   "description": "phonenumber utils for florin back and frontend",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require babel-core/register",
-    "build": "babel source/index.js > index.js",
+    "test": "npm run build && mocha",
+    "build": "babel --presets es2015 --plugins transform-flow-comments source/index.js > index.js",
     "prepublish": "npm run build"
   },
   "repository": {
