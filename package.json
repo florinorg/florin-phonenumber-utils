@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --require babel-core/register",
-    "build": "babel index.es6 > index.js",
+    "build": "babel source/index.js > index.js",
     "prepublish": "npm run build"
   },
   "repository": {
@@ -23,8 +23,9 @@
     "mocha": "^2.5.3"
   },
   "devDependencies": {
-    "babel-preset-es2015": "^6.9.0",
     "babel-cli": "^6.10.1",
-    "babel-core": "^6.9.1"
+    "babel-core": "^6.9.1",
+    "babel-plugin-transform-flow-comments": "^6.8.0",
+    "babel-preset-es2015": "^6.9.0"
   }
 }

@@ -11,4 +11,4 @@ Thumbs.db
 # Dependency directories
 node_modules
 
-index.js
+/index.js

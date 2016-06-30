@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-import { addPrefixToNumber, normalizePhoneNumber } from '../index.js';
+import { addPrefixToNumber, normalizePhoneNumber } from '../source/index.js';
 
 describe('PhoneNumberUtils', function() {
   describe('normalizePhoneNumber', function() {
@@ -18,8 +18,11 @@ describe('PhoneNumberUtils', function() {
       assert.equal('+31683258760', addPrefixToNumber('+31683258760', '+31'));
       assert.equal('+31683258760', addPrefixToNumber('+310683258760', '+31'));
       assert.equal('555555', addPrefixToNumber('555555', '+31'));
-      assert.throws(function() { addPrefixToNumber('', '+31') }, Error, "phoneNumber must have a length > 0");
-      assert.throws(function() { addPrefixToNumber('5355355', '') }, Error, 'Missing prefix parameter in addPrefixToNumber');
+    });
+
+    it('should return null when failing', function() {
+      assert.equal(null, addPrefixToNumber('', '+31'));
+      assert.equal(null, addPrefixToNumber('5355355', ''));
     });
   });
 });
