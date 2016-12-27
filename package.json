@@ -1,5 +1,5 @@
 {
-  "name": "@basdevries/florin-phonenumber-utils",
+  "name": "florin-phonenumber-utils",
   "version": "1.1.1",
   "description": "phonenumber utils for florin back and frontend",
   "main": "index.js",
