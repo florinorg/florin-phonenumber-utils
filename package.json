@@ -2,7 +2,7 @@
   "name": "florin-phonenumber-utils",
   "version": "1.1.2",
   "description": "phonenumber utils for florin back and frontend",
-  "main": "index.js",
+  "main": "source/index.js",
   "scripts": {
     "test": "npm run build && mocha",
     "build": "babel --presets es2015 --plugins transform-flow-comments source/index.js > index.js",
