@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/florinorg/phoneNumberUtils.git"
+    "url": "git+https://github.com/florinorg/florin-phonenumber-utils.git"
   },
   "author": "Bas de Vries",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/florinorg/phoneNumberUtils/issues"
+    "url": "https://github.com/florinorg/florin-phonenumber-utils/issues"
   },
-  "homepage": "https://github.com/florinorg/phoneNumberUtils#readme",
+  "homepage": "https://github.com/florinorg/florin-phonenumber-utils#readme",
   "dependencies": {
     "chai": "^3.5.0",
     "mocha": "^2.5.3"

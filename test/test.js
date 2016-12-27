@@ -4,7 +4,7 @@ const utils = require('../index.js');
 const addPrefixToNumber = utils.addPrefixToNumber;
 const normalizePhoneNumber = utils.normalizePhoneNumber;
 
-describe('PhoneNumberUtils', function() {
+describe('florin-phonenumber-utils', function() {
   describe('normalizePhoneNumber', function() {
     it('should return a (phone) number with only 1234567890+ as values', function () {
       assert.equal('0031683258760', normalizePhoneNumber('0031 6 (8 3)258-760'));
